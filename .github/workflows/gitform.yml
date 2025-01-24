@@ -14,3 +14,5 @@ jobs:
     steps:
       - run: |
           gh pr merge ${{ github.event.pull_request.number }} --auto
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
