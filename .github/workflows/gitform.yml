@@ -10,8 +10,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    # if: ${{ github.event.pull_request.user.login == 'git-form' }}
+    if: ${{ github.event.pull_request.user.login == 'Git Form' }}
     steps:
       - run: |
-          echo "${{ github.event.pull_request.user.login }}"
-          # gh pr merge ${{ github.event.pull_request.number }} --auto
+          gh pr merge ${{ github.event.pull_request.number }} --auto
