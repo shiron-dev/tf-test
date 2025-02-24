@@ -1,8 +1,10 @@
-name: Auto merge
+name: GitForm auto merge
+
 on:
-  pull_request:
+  push:
     branches:
-      - main
+      - 'gitform/**'
+
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
